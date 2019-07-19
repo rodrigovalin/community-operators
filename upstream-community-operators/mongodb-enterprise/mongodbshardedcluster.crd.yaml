@@ -40,6 +40,20 @@ spec:
                   type: string
                 version:
                   type: string
+                security:
+                  type: object
+                  properties:
+                    tls:
+                      type: object
+                      properties:
+                        enabled:
+                          type: boolean
+                        ca:
+                          type: string
+                    clusterAuthenticationMode:
+                      type: string
+                      enum: ["x509"]
+
           required:
           - credentials
           - project
@@ -55,4 +69,3 @@ status:
     plural: ""
   conditions: null
   storedVersions: null
-  
